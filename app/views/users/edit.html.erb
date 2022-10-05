@@ -1,2 +1,19 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<main>
+ <div class='container'>
+  <div class='row'>
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+
+    <% form with model @user |user| do %>
+  		<h1>Uers info</h1>
+  		<h2>Name</h2>
+  		<a class="book_37445" href="/books/37445">Show</a> |
+  		<h2>Image</h2>
+      <%= f.file_field :image, accept: "image/*" %>
+
+      <h2>Introduction</h2>
+
+      <%= f.submit 'Update User' %>
+
+      <% end %>
+
+</html>

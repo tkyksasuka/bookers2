@@ -38,6 +38,10 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.1]
 
       t.text :introduction
 
+      t.integer :user_id
+
+      f.file_field :image
+
 
 
     end
