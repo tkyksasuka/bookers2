@@ -4,14 +4,20 @@
   <div class="row">
     <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
   		<h1>Editting book</h1>
-  		<h2>Name</h2>
-  		<a class="book_37445" href="/books/37445">Show</a> |
-  		<h2>Image</h2>
-  		<a class="back" href="/books">Back</a>
-      <h2>Introduction</h2>
+  		<%= form_with model: @book,url: book_path(@book.id) method: :patch do |f| %>
+  		<h1>Title</h1>
+  		<%= f.text_field:title %>
+  		<h2>Opinion</h2>
+  		<%=f.text_area:body %>
+      <br>
+      <%= f.submit 'Update Book' %>
 
-      updateuser
+      <% end %>
+      <%= link_to 'Show',book_path(@book.id) %>
+  |
+  <%= link_to 'Back',books_path %>
   </div>
+
 </div>
       </div>
 
