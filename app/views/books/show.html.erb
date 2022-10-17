@@ -27,11 +27,11 @@
           <%= @book.body %>
         </td>
         <td>
-          <%= link_to 'Edit', edit_book_path(@book.id) %>
+          <%= link_to 'Edit', edit_book_path(@book.id),class: "btn btn-green" %>
         </td>
         <td>
           <% if @book.user == current_user %>
-          <%= link_to "Destroy",book_path(@book.id), method: :delete, "data-confirm" => "本当に消しますか？" %>
+          <%= link_to "Destroy",book_path(@book.id),class: "btn btn-red" method: :delete, "data-confirm" => "本当に消しますか？" %>
           <% end %>
         </td>
       </tr>

@@ -26,6 +26,7 @@ class BooksController < ApplicationController
        redirect_to book_path(@book.id)
     else
       render:new
+      flash[:notice] = "You have created book error."
     end
   end
 
@@ -45,6 +46,7 @@ class BooksController < ApplicationController
        flash[:notice] = "You have updated book successfully."
     else
       render:edit
+      flash[:notice] = "You have updated book error."
     end
   end
 
