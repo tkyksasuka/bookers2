@@ -9,6 +9,7 @@
 
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
    <body class="d-flex flex-column vh-100">
@@ -24,7 +25,8 @@
             <ul class="navbar-nav ml-auto">
             <% if user_signed_in? %>
             <li class="nav-item">
-              <%= link_to "Home", root_path, class: 'nav-link text-dark' %>
+              <%= link_to "Home", user_path(current_user), class: 'nav-link text-dark' %>
+              </i>
             </li>
             <li class="nav-item">
               <%= link_to 'Users', users_path, class: 'nav-link text-dark' %>
