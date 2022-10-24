@@ -40,8 +40,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.1]
 
       t.integer :user_id
 
-      f.file_field :profile_image
-
 
 
     end
